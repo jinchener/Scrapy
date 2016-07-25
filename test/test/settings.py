@@ -19,7 +19,7 @@ NEWSPIDER_MODULE = 'test.spiders'
 #USER_AGENT = 'test (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -111,64 +111,57 @@ USER_AGENTS = [
 
 
 PROXIES = [
-    {'ip_port': '218.56.132.158:8080', 'user_pass': ''},
-    {'ip_port': '114.243.78.34:81', 'user_pass': ''},
-    {'ip_port': '211.100.29.195:82', 'user_pass': ''},
-    {'ip_port': '117.81.52.83:808', 'user_pass': ''},
-    {'ip_port': '182.254.218.141:80', 'user_pass': ''},
-    {'ip_port': '61.158.173.14:8080', 'user_pass': ''},
-    {'ip_port': '218.26.237.18:3128', 'user_pass': ''},
-    {'ip_port': '122.96.59.102:843', 'user_pass': ''},
+    {'ip_port': '14.119.51.99:8080', 'user_pass': ''},
+    {'ip_port': '124.95.113.49:8888', 'user_pass': ''},
+    {'ip_port': '124.88.67.30:843', 'user_pass': ''},
+    {'ip_port': '210.13.97.108:443', 'user_pass': ''},
+    {'ip_port': '114.250.76.235:81', 'user_pass': ''},
+    {'ip_port': '111.13.109.53:80', 'user_pass': ''},
+    {'ip_port': '182.43.0.71:8888', 'user_pass': ''},
+    {'ip_port': '110.179.22.46:8888', 'user_pass': ''},
+    {'ip_port': '124.95.113.49:8888', 'user_pass': ''},
+    {'ip_port': '182.43.0.71:8888', 'user_pass': ''},
+    {'ip_port': '175.6.25.39:8888', 'user_pass': ''},
+    {'ip_port': '117.169.17.247:80', 'user_pass': ''},
+    {'ip_port': '210.13.97.108:443', 'user_pass': ''},
+    {'ip_port': '14.119.51.99:8080', 'user_pass': ''},
+    {'ip_port': '114.250.76.235:81', 'user_pass': ''},
+    {'ip_port': '125.62.14.162:3128', 'user_pass': ''},
+    {'ip_port': '125.62.14.162:3128', 'user_pass': ''},
+    {'ip_port': '122.96.59.106:80', 'user_pass': ''},
+    {'ip_port': '111.13.109.53:80', 'user_pass': ''},
+    {'ip_port': '140.255.203.79:8888', 'user_pass': ''},
+    {'ip_port': '183.62.118.148:8080', 'user_pass': ''},
+    {'ip_port': '144.12.236.172:8888', 'user_pass': ''},
+    {'ip_port': '140.255.203.79:8888', 'user_pass': ''},
+    {'ip_port': '202.100.167.182:80', 'user_pass': ''},
+    {'ip_port': '119.183.230.94:81', 'user_pass': ''},
+    {'ip_port': '202.100.167.182:80', 'user_pass': ''},
+    {'ip_port': '60.191.130.36:3128', 'user_pass': ''},
+    {'ip_port': '39.65.59.39:81', 'user_pass': ''},
+    {'ip_port': '111.199.22.218:81', 'user_pass': ''},
+    {'ip_port': '14.119.51.99:8080', 'user_pass': ''},
+    {'ip_port': '210.13.97.108:443', 'user_pass': ''},
+    {'ip_port': '60.191.130.36:3128', 'user_pass': ''},
+    {'ip_port': '140.255.203.79:8888', 'user_pass': ''},
+    {'ip_port': '112.83.235.204:8888', 'user_pass': ''},
+    {'ip_port': '119.6.136.122:80', 'user_pass': ''},
+    {'ip_port': '14.119.51.99:8080', 'user_pass': ''},
+    {'ip_port': '39.65.59.39:81', 'user_pass': ''},
+    {'ip_port': '61.177.75.214:3128', 'user_pass': ''},
+    {'ip_port': '183.61.236.55:3128', 'user_pass': ''},
+    {'ip_port': '202.100.167.142:80', 'user_pass': ''},
+    {'ip_port': '121.17.193.149:8888', 'user_pass': ''},
+    {'ip_port': '183.61.236.55:3128', 'user_pass': ''},
+    {'ip_port': '114.250.76.235:81', 'user_pass': ''},
+    {'ip_port': '119.52.211.173:8888', 'user_pass': ''},
+    {'ip_port': '113.233.252.117:81', 'user_pass': ''},
+    {'ip_port': '211.143.155.223:843', 'user_pass': ''},
+    {'ip_port': '120.236.138.27:8118', 'user_pass': ''},
+    {'ip_port': '124.65.176.210:81', 'user_pass': ''},
     {'ip_port': '124.200.96.226:8118', 'user_pass': ''},
-    {'ip_port': '220.249.21.222:8118', 'user_pass': ''},
-    {'ip_port': '60.191.174.227:3128', 'user_pass': ''},
-    {'ip_port': '122.226.128.251:3128', 'user_pass': ''},
-    {'ip_port': '122.96.59.106:82', 'user_pass': ''},
-    {'ip_port': '106.40.108.27:8888', 'user_pass': ''},
-    {'ip_port': '111.13.109.53:80', 'user_pass': ''},
-    {'ip_port': '111.13.109.53:80', 'user_pass': ''},
-    {'ip_port': '14.119.51.99:8080', 'user_pass': ''},
-    {'ip_port': '183.62.118.148:8080', 'user_pass': ''},
-    {'ip_port': '14.119.51.99:8080', 'user_pass': ''},
-    {'ip_port': '124.95.113.49:8888', 'user_pass': ''},
-    {'ip_port': '183.62.118.148:8080', 'user_pass': ''},
-    {'ip_port': '124.88.67.30:843', 'user_pass': ''},
-    {'ip_port': '175.6.25.39:8888', 'user_pass': ''},
-    {'ip_port': '140.255.203.79:8888', 'user_pass': ''},
-    {'ip_port': '210.13.97.108:443', 'user_pass': ''},
-    {'ip_port': '39.65.59.39:81', 'user_pass': ''},
-    {'ip_port': '125.62.14.162:3128', 'user_pass': ''},
     {'ip_port': '182.43.0.71:8888', 'user_pass': ''},
-    {'ip_port': '182.43.0.71:8888', 'user_pass': ''},
-    {'ip_port': '110.179.22.46:8888', 'user_pass': ''},
-    {'ip_port': '124.88.67.30:843', 'user_pass': ''},
-    {'ip_port': '111.13.109.53:80', 'user_pass': ''},
-    {'ip_port': '140.255.203.79:8888', 'user_pass': ''},
-    {'ip_port': '210.13.97.108:443', 'user_pass': ''},
-    {'ip_port': '183.62.118.148:8080', 'user_pass': ''},
-    {'ip_port': '114.250.76.235:81', 'user_pass': ''},
-    {'ip_port': '124.95.113.49:8888', 'user_pass': ''},
-    {'ip_port': '140.255.203.79:8888', 'user_pass': ''},
-    {'ip_port': '125.62.14.162:3128', 'user_pass': ''},
-    {'ip_port': '39.65.59.39:81', 'user_pass': ''},
-    {'ip_port': '210.13.97.108:443', 'user_pass': ''},
-    {'ip_port': '175.6.25.39:8888', 'user_pass': ''},
-    {'ip_port': '111.13.109.53:80', 'user_pass': ''},
-    {'ip_port': '114.250.76.235:81', 'user_pass': ''},
-    {'ip_port': '14.119.51.99:8080', 'user_pass': ''},
-    {'ip_port': '140.255.203.79:8888', 'user_pass': ''},
-    {'ip_port': '182.43.0.71:8888', 'user_pass': ''},
-    {'ip_port': '114.250.76.235:81', 'user_pass': ''},
-    {'ip_port': '124.88.67.30:843', 'user_pass': ''},
-    {'ip_port': '175.6.25.39:8888', 'user_pass': ''},
-    {'ip_port': '110.179.22.46:8888', 'user_pass': ''},
-    {'ip_port': '125.62.14.162:3128', 'user_pass': ''},
-    {'ip_port': '124.95.113.49:8888', 'user_pass': ''},
-    {'ip_port': '14.119.51.99:8080', 'user_pass': ''},
-    {'ip_port': '210.13.97.108:443', 'user_pass': ''},
-    {'ip_port': '182.43.0.71:8888', 'user_pass': ''},
-    {'ip_port': '183.62.118.148:8080', 'user_pass': ''},
-    {'ip_port': '39.65.59.39:81', 'user_pass': ''}
+    {'ip_port': '123.173.37.94:8888', 'user_pass': ''}
 ]
 COOKIES_ENABLED=False
 
@@ -177,13 +170,13 @@ DOWNLOADER_MIDDLEWARES = {
     'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware' : None,
     'test.rotate_useragent.RotateUserAgentMiddleware' :400,
     'test.middlewares.RandomUserAgent': 1,
+    'scrapy.contrib.downloadermiddleware.retry.RetryMiddleware': 500,
     'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware': 110,
     #scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 110,
     'test.middlewares.ProxyMiddleware': 100,
 }
 
 
-RETRY_TIMES=20
 
 
 FEED_EXPORTERS = {
@@ -209,3 +202,10 @@ FIELDS_TO_EXPORT = [
 ITEM_PIPELINES = {
     'test.pipelines.TestPipeline': 300,
 }
+
+
+DOWNLOAD_TIMEOUT = 60
+HTTPERROR_ALLOWED_CODES = [500, 503, 504, 400, 403, 408]
+RETRY_ENABLED = True
+RETRY_TIMES = 40
+RETRY_HTTP_CODES = [500, 503, 504, 400, 408]

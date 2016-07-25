@@ -37,10 +37,10 @@ class TestPipeline(object):
 
     def process_item(self, item,spider):
         curTime = datetime.datetime.now()
-        print type(item['zyid']),item['zyid']
+        #print type(item['zyid']),item['zyid']
 
-        sql = """insert ignore into score20160719(schoolid,schoolname,specialtyname,localprovince,studenttype,year,batch,var,var_score,max,min,seesign,creat_at) values(%s, %s, %s, %s,%s, %s, %s, %s,%s,  %s，%s, %s, %s)"""
-        param = (item['schoolid'],item['schoolname'],item['specialtyname'],item['localprovince'],item['studenttype'],item['year'],item['batch'],item['var'],item['var_score'],item['max'],item['min'],item['seesign'],curTime)
+        sql = """insert ignore into score20160720(schoolid,schoolname,specialtyname,localprovince,studenttype,year,batch,var,var_score,max,min,zyid,url,seesign,curTime,urlcount) values(%s, %s, %s, %s,%s, %s,%s, %s,%s, %s,%s,%s,%s, %s, %s, %s)"""#
+        param = (item['schoolid'],item['schoolname'],item['specialtyname'],item['localprovince'],item['studenttype'],item['year'],item['batch'],item['var'],item['var_score'],item['max'],item['min'],item['zyid'],item['url'],item['seesign'],curTime,item['urlcount'])#
         #sql = """insert ignore into score20160719(schoolid,schoolname,specialtyname) values(%s, %s, %s)"""
 
         #param = (item['schoolid'],item['schoolname'],item['specialtyname'])

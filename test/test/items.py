@@ -26,4 +26,5 @@ class TestItem(scrapy.Item):
     zyid=scrapy.Field()
     url=scrapy.Field()
     seesign=scrapy.Field()
+    urlcount=scrapy.Field()
     pass
