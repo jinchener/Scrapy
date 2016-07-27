@@ -131,7 +131,7 @@ class Downloader(object):
                   'dfwds': [{'wdcode': 'zb', 'valuecode': None},
                             {'wdcode': 'sj', 'valuecode': self.date}],
                   'k1': None}
-        if (self.dbcode == 'fsyd') or (self.dbcode == 'fsjd'):
+        if (self.dbcode == 'fsyd') or (self.dbcode == 'fsjd') or (self.dbcode == 'fsnd'):
             dowdloadd = {"110000": "北京市", "120000": "天津市", "130000": "河北省", "140000": "山西省", "150000": "内蒙古自治区",
                          "210000": "辽宁省", "220000": "吉林省", "230000": "黑龙江省", "310000": "上海市", "320000": "江苏省",
                          "330000": "浙江省", "340000": "安徽省", "350000": "福建省", "360000": "江西省", "370000": "山东省",
@@ -454,6 +454,11 @@ class Document(object):
                 timetype = u'季度'
                 area = u'国家'
                 locate = u'中国'
+            elif self.dbcode == 'hgnd':
+                datatype = u'年度数据'
+                timetype = u'年度'
+                area = u'国家'
+                locate = u'中国'
             elif self.dbcode == 'fsyd':
                 datatype = u'分省月度数据'
                 timetype = u'月度'
@@ -464,6 +469,16 @@ class Document(object):
                 timetype = u'季度'
                 area = u'省'
                 locate = j[2]
+            elif self.dbcode == 'fsnd':
+                datatype = u'分省年度数据'
+                timetype = u'年度'
+                area = u'省'
+                locate = j[2]
+            elif self.dbcode == 'csnd':
+                datatype = u'主要城市年度价格'
+                timetype = u'年度'
+                area = u'市'
+                locate = j[2]
             elif self.dbcode == 'csyd':
                 datatype = u'主要城市月度价格'
                 timetype = u'月度'
@@ -472,6 +487,8 @@ class Document(object):
 
             if unit == '%':
                 unit = u'百分比'
+            elif unit:
+                unit=unit
             elif (u'分类指数' in dataname) or (u'价格指数' in dataname) or (u'上年同期' in dataname) or (
                     u'上月同期' in dataname) or (u'上年同月' in dataname):
                 unit = u'百分比'
@@ -532,8 +549,8 @@ if __name__ == "__main__":
     temp = u'国家数据(国家统计局)抓取器加强版/This toolkit could automatically download data from National data base. '
     print temp.encode('gb18030')
     querytype = ''
-    while not(querytype == '1' or querytype == '2' or querytype == '3' or querytype == '4' or querytype == '5'):
-        temp = u'请输入查询数据种类/Please input the type of query:\n1--月度数据/monthly  2--季度数据/seasonly  3--分省月度/promonthly  4--分省季度/proseasonly  5--主要城市月度价格/maincity'
+    while not(querytype == '1' or querytype == '2' or querytype == '3' or querytype == '4' or querytype == '5' or querytype == '6' or querytype == '7' or querytype == '8'):
+        temp = u'请输入查询数据种类/Please input the type of query:\n1--月度数据/monthly  2--季度数据/seasonly  3--分省月度/promonthly  4--分省季度/proseasonly  5--主要城市月度价格/maincity  6--年度数据/yearly   7--分省年度/proyearly   8--主要城市年度价格/maincityyear'
         print temp.encode('gb18030')
         querytype = raw_input()
     querystarttime = ''
@@ -577,7 +594,7 @@ if __name__ == "__main__":
     # datatypedic = {"1": u"月度数据", "2": u"季度数据",
     #               "3": u"分省月度数据", "4": u"分省季度数据", "5": u"主要城市月度价格"}
     datatypedic = {"1": u"monthly", "2": u"seasonly",
-                   "3": u"promonthly", "4": u"proseasonly", "5": u"maincity"}
+                   "3": u"promonthly", "4": u"proseasonly", "5": u"maincity", "6": u"yearly", "7": u"proyearly", "8": u"maincityyear"}
     filename = datatypedic[querytype] + '--' + \
         querytime + '--' + todaydate + '.csv'
     dbcodenames = 'hgjd'
@@ -593,6 +610,15 @@ if __name__ == "__main__":
     elif (querytype == '4'):  # 'fsjd'-->分省季度
         dbcodenames = 'fsjd'
         savefoldname = 'Proseasonly'
+    elif (querytype == '6'):  # 'fsjd'-->分省季度
+        dbcodenames = 'hgnd'
+        savefoldname = 'yearly'
+    elif (querytype == '7'):  # 'fsjd'-->分省季度
+        dbcodenames = 'fsnd'
+        savefoldname = 'proyearly'
+    elif (querytype == '8'):  # 'fsjd'-->分省季度
+        dbcodenames = 'csnd'
+        savefoldname = 'maincityyear'
     else:  # 'hgnd'--》年度
         dbcodenames = 'csyd'
         savefoldname = 'Maincity'
